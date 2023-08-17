@@ -32,7 +32,7 @@ const products = [
 ];
 
 const filter3 = products.filter((item) => {
-  if (item.price > 500 || item.category === "Electronics") {
+  if (item.price > 500 && item.category === "Electronics") {
     return true;
   } else {
     return false;
