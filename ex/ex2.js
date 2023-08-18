@@ -27,22 +27,8 @@ const data = [
   },
 ];
 
-// const output = [
-// {
-//   id: 1,
-//   color: "red",
-//   name: "John",
-//   city: "New York",
-// },
-// {
-//   id: 2,
-//   color: "blue",
-//   name: "Emily",
-//   city: "Los Angeles",
-// },
-//   ];
 const filter1 = data.filter((item) => {
-  if (item.color === "red" || item.color === "blue") {
+  if (colors.includes(item.color)) {
     return true;
   } else {
     return false;
@@ -50,12 +36,3 @@ const filter1 = data.filter((item) => {
 });
 
 console.log(filter1);
-// const filter1 = data.filter((item) => {
-//   if (item.color === item[0] || item.color === item[1]) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// });
-
-// console.log(filter1(["red", "blue"]));
