@@ -13,4 +13,4 @@ function validParanthesis(str) {
   }
   return true;
 }
-console.log(validParanthesis("[{{{}}}]"));
+console.log(validParanthesis("[{{{}}]"));
