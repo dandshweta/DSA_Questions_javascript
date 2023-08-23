@@ -7,3 +7,4 @@
 // Output :4
 // Explaination: Below are triplets with sum less than 12
 // (1,3,4),(1,3,5),(1,3,7),(1,4,5)
+function exa

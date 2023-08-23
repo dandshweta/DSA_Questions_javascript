@@ -11,8 +11,11 @@ function validParanthesis(str) {
     } else if (arr[i] !== stack.pop()) {
       return false;
     }
+    // else if (arr[i] === stack.length - 1) {
+    //   stack.pop();
+    // }
+    console.log(stack);
   }
-
-  return true;
+  return stack.length === 0;
 }
-console.log(validParanthesis("([{}]}])"));
+console.log(validParanthesis("[{[{}]}]"));
