@@ -14,6 +14,7 @@ function validParanthesis(str) {
       return false;
     }
   }
+
   return stack.length === 0;
 }
 
