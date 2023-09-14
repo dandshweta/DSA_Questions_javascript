@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      This is the content of myDiv.
+      <div id="sDiv"></div>
+    </div>
+  </body>
+</html>
+<script>
+  function findId(root, id) {
+    for (let i = 0; i < root.children.length; i++) {
+      const element = root.children[i];
+
+      const result = findId(element, id);
+
+      if (result) {
+        return result;
+      }
+    }
+
+    if (root.id === id) {
+      return root;
+    }
+
+    return null;
+  }
+
+  //   const myElement = document.getElementById("myDiv");
+
+  const myElement = document.getElementById("sDiv");
+
+  if (myElement) {
+    console.log("Found element:", myElement);
+  } else {
+    console.log("Element not found.");
+  }
+</script>
