@@ -1,16 +1,11 @@
-function mergeAndSortArrays(arr1, arr2) {
+function mergeAndSortArrays(list1, list2) {
   const mergedArray = [];
-  for (let i = 0; i < arr1.length; i++) {
-    if (!mergedArray.includes(arr1[i])) {
-      mergedArray.push(arr1[i]);
-    }
+  for (let i = 0; i < list1.length; i++) {
+    mergedArray.push(list1[i]);
   }
-  for (let i = 0; i < arr2.length; i++) {
-    if (!mergedArray.includes(arr2[i])) {
-      mergedArray.push(arr2[i]);
-    }
+  for (let i = 0; i < list2.length; i++) {
+    mergedArray.push(list2[i]);
   }
-
   for (let i = 0; i < mergedArray.length; i++) {
     for (let j = i + 1; j < mergedArray.length; j++) {
       if (mergedArray[i] > mergedArray[j]) {
