@@ -5,5 +5,3 @@ const arr1 = [
   { name: "Craig Mack", goals: 5, assists: 7, points: 12 },
   { name: "Dog", bones: 100 },
 ];
-const s = arr1.name;
-console.log(s);
