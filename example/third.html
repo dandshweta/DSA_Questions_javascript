@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  for (var i = 0; i < 5; i++) {
+    //how to fix it below 3 ways to solve this error
+    setTimeout(() => {
+      console.log({ i });
+    }, 0);
+  } //output is 5 times 5
+</script>
+<script>
+  for (var i = 0; i < 5; i++) {
+    setTimeout(() => {
+      console.log({ i });
+    }, 0);
+  }
+
+  // First
+  for (let i = 0; i < 5; i++) {
+    setTimeout(() => {
+      console.log({ i });
+    }, 0);
+  }
+
+  // Second
+  //   for (var i = 0; i < 5; i++) {
+  //     function run() {
+  //       setTimeout(() => {
+  //         console.log({ i });
+  //       }, 0);
+  //     }
+
+  //     run();
+  //   }
+  for (var i = 0; i < 5; i++) {
+    function run(i) {
+      setTimeout(() => {
+        console.log({ i });
+      }, 0);
+    }
+
+    run(i);
+  }
+
+  // Third way
+  for (var i = 0; i < 5; i++) {
+    ((i) => {
+      setTimeout(() => {
+        console.log({ i });
+      }, 0);
+    })(i);
+  }
+
+  for (var i = 0; i < 5; i++) {
+    let j = i;
+    setTimeout(() => {
+      console.log({ j });
+    }, 0);
+  }
+</script>
