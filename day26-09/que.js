@@ -89,6 +89,7 @@ function commom(arr1, arr2) {
   }
   return result;
 }
+
 console.log(
   commom(
     [
