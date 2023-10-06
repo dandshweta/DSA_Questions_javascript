@@ -25,7 +25,7 @@ function findOccurance(str) {
       }
     }
   }
-  return finalArr.toString();
+  return finalArr.join("").toString();
 }
 
 console.log(findOccurance("cCaaAAbbbBBB"));
