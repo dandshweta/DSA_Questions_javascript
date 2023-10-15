@@ -52,5 +52,23 @@
     })
     .catch((wakeUpError) => console.log("1.Error: ", wakeUpError));
 
+  const callAPI = async () => {
+    try {
+      console.log("Async Code Started");
+      const wakeUpData = await onWakeUp();
+      console.log("1. ", wakeUpData);
+
+      const onGettingReadyData = await onGettingReady();
+      console.log("2. ", onGettingReadyData);
+
+      const onGoingToShoppingData = await onGoingToShopping();
+      console.log("3. ", onGoingToShoppingData);
+
+      console.log("Async Code Ended");
+    } catch (err) {
+      console.log("Error: ", err);
+    }
+  };
+  callAPI();
   console.log("Code ended");
 </script>

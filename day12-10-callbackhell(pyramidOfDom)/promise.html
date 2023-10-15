@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const initiatePayment = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Payment initiated");
+      }, 2000);
+    });
+  };
+
+  const processPayment = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Payment processed");
+      }, 3000);
+    });
+  };
+
+  const completePayment = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve("Payment completed");
+      }, 2000);
+    });
+  };
+
+  initiatePayment()
+    .then((initiateResult) => {
+      console.log("1. ", initiateResult);
+      return processPayment();
+    })
+    .then((processResult) => {
+      console.log("2. ", processResult);
+      return completePayment();
+    })
+    .then((completeResult) => {
+      console.log("3. ", completeResult);
+    })
+    .catch((error) => {
+      console.log("Error: ", error);
+    });
+</script>
