@@ -28,7 +28,7 @@ function Anagram(str1, str2) {
     for (let j = 0; j < str2.length; j++) {
       if (str1[i] === str2[j]) {
         found = true;
-        str2 = str2.slice(0, j) + str2.slice(j + 1); // Remove matched character from str2
+        str2 = str2.slice(0, j) + str2.slice(j + 1);
         break;
       }
     }
